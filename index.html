@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LivePoll — Real-time interactive polling for audiences, classrooms & events.">
+  <title>LivePoll — Live Interactive Polls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,900&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ══════════════════════════════════════
+       SCREEN: HOME
+  ══════════════════════════════════════ -->
+  <div id="screen-home" class="screen active">
+    <div class="home-layout">
+      <div class="home-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">LivePoll</span>
+      </div>
+      <div class="home-hero">
+        <h1 class="hero-title">
+          Real-time polls<br>
+          <em>that move</em><br>
+          audiences.
+        </h1>
+        <p class="hero-sub">Create a poll in seconds. Watch results live.</p>
+      </div>
+      <div class="home-actions">
+        <button class="btn btn-primary btn-xl" id="btnCreatePoll">
+          <span>Create a Poll</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <div class="join-inline">
+          <input type="text" id="homeJoinCode" class="input-code-inline" placeholder="Enter room code" maxlength="6" inputmode="numeric">
+          <button class="btn btn-outline" id="btnHomeJoin">Join</button>
+        </div>
+      </div>
+      <div class="home-scroll-hint">
+        <div class="scroll-bar"></div>
+      </div>
+    </div>
+    <div class="home-visual">
+      <div class="demo-poll">
+        <div class="demo-q">What's your favourite programming language?</div>
+        <div class="demo-bars">
+          <div class="demo-bar-row"><span>JavaScript</span><div class="demo-bar" style="--w:78%"><span>78%</span></div></div>
+          <div class="demo-bar-row"><span>Python</span><div class="demo-bar" style="--w:62%"><span>62%</span></div></div>
+          <div class="demo-bar-row"><span>Rust</span><div class="demo-bar" style="--w:34%"><span>34%</span></div></div>
+          <div class="demo-bar-row"><span>TypeScript</span><div class="demo-bar" style="--w:55%"><span>55%</span></div></div>
+        </div>
+        <div class="demo-badge">🔴 142 live votes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: CREATE POLL
+  ══════════════════════════════════════ -->
+  <div id="screen-create" class="screen">
+    <div class="screen-header">
+      <button class="btn-back" id="btnBackFromCreate">← Back</button>
+      <h2 class="screen-title">Create Poll</h2>
+      <div></div>
+    </div>
+    <div class="create-body">
+      <div class="form-section">
+        <label class="form-label">Poll Title</label>
+        <input type="text" id="pollTitle" class="input-field" placeholder="e.g. Team Kickoff Survey" maxlength="80">
+      </div>
+      <div id="questionsList" class="questions-list"></div>
+      <button class="btn btn-ghost btn-add-q" id="btnAddQuestion">
+        <span class="plus-icon">+</span> Add Question
+      </button>
+      <div class="create-footer">
+        <button class="btn btn-primary btn-full" id="btnLaunchPoll">Launch Poll →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: LOBBY (HOST)
+  ══════════════════════════════════════ -->
+  <div id="screen-lobby" class="screen">
+    <div class="lobby-layout">
+      <div class="lobby-top">
+        <div class="lobby-brand"><span class="brand-dot sm"></span> LivePoll</div>
+        <div class="lobby-poll-title" id="lobbyPollTitle">Untitled Poll</div>
+      </div>
+      <div class="lobby-center">
+        <p class="lobby-instruction">Share this code with your audience</p>
+        <div class="room-code-display" id="lobbyRoomCode">——</div>
+        <div id="lobbyQr" class="qr-wrap"></div>
+        <p class="lobby-url" id="lobbyUrl"></p>
+      </div>
+      <div class="lobby-bottom">
+        <div class="participant-count">
+          <span class="live-dot"></span>
+          <span id="lobbyParticipantCount">0</span> participants joined
+        </div>
+        <button class="btn btn-primary btn-xl" id="btnStartPoll">Start Poll →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: HOST — ACTIVE QUESTION
+  ══════════════════════════════════════ -->
+  <div id="screen-host-active" class="screen">
+    <div class="host-layout">
+      <div class="host-header">
+        <div class="host-meta">
+          <span class="live-badge">🔴 LIVE</span>
+          <span id="hostRoomCode" class="host-code"></span>
+        </div>
+        <div class="host-progress" id="hostProgress">Q1 of 1</div>
+        <div class="host-controls">
+          <button class="btn btn-outline btn-sm" id="btnHostReveal">Show Results</button>
+          <button class="btn btn-primary btn-sm" id="btnHostNext">Next →</button>
+        </div>
+      </div>
+      <div class="host-question-body">
+        <h2 class="host-question-text" id="hostQuestionText">Question</h2>
+        <div class="vote-count-display">
+          <span id="hostVoteCount">0</span>
+          <span class="vote-label">votes</span>
+        </div>
+        <div id="hostChart" class="chart-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: JOIN (PARTICIPANT)
+  ══════════════════════════════════════ -->
+  <div id="screen-join" class="screen">
+    <div class="join-layout">
+      <div class="join-brand">
+        <span class="brand-dot"></span> LivePoll
+      </div>
+      <div class="join-body">
+        <h2 class="join-title">Join a Poll</h2>
+        <p class="join-sub">Enter the room code shown on screen</p>
+        <input type="text" id="joinCode" class="input-code-big" placeholder="000000"
+               maxlength="6" inputmode="numeric" autocomplete="off">
+        <div id="joinError" class="error-msg" style="display:none">Room not found. Check the code.</div>
+        <button class="btn btn-primary btn-xl btn-full" id="btnJoinPoll">Join →</button>
+        <button class="btn-link" id="btnJoinBack">← Go back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: WAITING (PARTICIPANT)
+  ══════════════════════════════════════ -->
+  <div id="screen-waiting" class="screen">
+    <div class="centered-screen">
+      <div class="waiting-anim">
+        <div class="waiting-dot"></div>
+        <div class="waiting-dot"></div>
+        <div class="waiting-dot"></div>
+      </div>
+      <h2 class="waiting-title">You're in!</h2>
+      <p class="waiting-sub">Waiting for the host to start the poll…</p>
+      <div class="waiting-room-code" id="waitingRoomCode"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: VOTE (PARTICIPANT)
+  ══════════════════════════════════════ -->
+  <div id="screen-vote" class="screen">
+    <div class="vote-layout">
+      <div class="vote-header">
+        <div class="vote-progress" id="voteProgress">Q1 of 1</div>
+        <div class="vote-room" id="voteRoom"></div>
+      </div>
+      <div class="vote-body">
+        <h2 class="vote-question" id="voteQuestionText">Question</h2>
+        <div id="voteOptions" class="vote-options"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: VOTED (PARTICIPANT)
+  ══════════════════════════════════════ -->
+  <div id="screen-voted" class="screen">
+    <div class="centered-screen">
+      <div class="voted-icon">✓</div>
+      <h2 class="voted-title">Answer submitted!</h2>
+      <p class="voted-sub">Waiting for results…</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: RESULTS (PARTICIPANT)
+  ══════════════════════════════════════ -->
+  <div id="screen-p-results" class="screen">
+    <div class="p-results-layout">
+      <div class="p-results-header">Results</div>
+      <h2 class="p-results-question" id="pResultsQuestion"></h2>
+      <div id="pResultsChart" class="chart-container"></div>
+      <p class="p-results-waiting" id="pResultsWaiting">Waiting for next question…</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SCREEN: ENDED
+  ══════════════════════════════════════ -->
+  <div id="screen-ended" class="screen">
+    <div class="centered-screen">
+      <div class="ended-icon">🎉</div>
+      <h2 class="ended-title">Poll Complete!</h2>
+      <p class="ended-sub">Thanks for participating.</p>
+      <button class="btn btn-primary" id="btnEndedHome">Back to Home</button>
+    </div>
+  </div>
+
+</div><!-- /#app -->
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<!-- QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/poll.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
